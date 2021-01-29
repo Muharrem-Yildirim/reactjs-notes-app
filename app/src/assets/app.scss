@@ -1,0 +1,100 @@
+@import "../../node_modules/bootstrap/scss/_functions.scss";
+@import "../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../node_modules/bootstrap/scss/_mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu:wght@500&display=swap");
+
+html,
+body {
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+}
+
+nav {
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.4);
+}
+
+.top-controls {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 0.25rem;
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.notes {
+  .note {
+    padding: 10px;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.3);
+    border: 0px;
+    margin-bottom: 20px;
+    transform: translateZ(0);
+
+    .top {
+      display: flex;
+
+      .delete-button {
+        &:hover {
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+
+    .seperator {
+      margin-top: 15px;
+      margin-bottom: 5px;
+      border-top: 2px dotted rgba(0, 0, 0, 0.185);
+    }
+
+    .title {
+      width: 100%;
+      font-family: "Ubuntu", sans-serif;
+      margin-bottom: 10px;
+      border: 0px;
+      background-color: transparent;
+    }
+
+    .content {
+      width: 100%;
+      margin: 0px;
+      font-family: "Montserrat", sans-serif;
+      border: 0px;
+      background-color: transparent;
+      transition: width 0.3s, height 0.3s, left 0.3s;
+      resize: none;
+    }
+
+    .title:focus,
+    .content:focus {
+      outline: none;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Montserrat", sans-serif;
+      color: #000000a1;
+      font-size: 14px;
+
+      i {
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.card-columns {
+  @include media-breakpoint-only(xl) {
+    column-count: 3 !important;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 2 !important;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2 !important;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 1 !important;
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "reactjs-notes-app",
+  "version": "1.0.0",
+  "description": "Simple note app made with React.js and Bootstrap.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muharrem-Yildirim/reactjs-notes-app.git"
+  },
+  "author": "Muharrem Yıldırım (https://github.com/Muharrem-Yildirim)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muharrem-Yildirim/reactjs-notes-app/issues"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "app/*"
+    ]
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.13",
+    "path": "^0.12.7"
+  }
+}
